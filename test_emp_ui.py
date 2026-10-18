@@ -6,6 +6,7 @@ from selenium.webdriver.edge.service import Service
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
+@pytest.mark.skip(reason="云端无浏览器界面，跳过")
 def test_ui_show_employee():
     """测试：UI页面能否正确显示数据库中的员工"""
     service = Service(EdgeChromiumDriverManager().install())
